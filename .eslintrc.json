@@ -13,6 +13,7 @@
     "class-methods-use-this": "off",
     "global-require": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "jest/no-disabled-tests": "off",
     "linebreak-style": "off",
     "no-multi-assign": "off",
     "no-param-reassign": ["error", { "props": false }],
