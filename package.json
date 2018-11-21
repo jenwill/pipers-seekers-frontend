@@ -9,7 +9,8 @@
     "build": "webpack --config webpack.prod.js",
     "pack": "webpack --config webpack.prod.js",
     "heroku-postbuild": "webpack --progress --config webpack.prod.js",
-    "test": "jest --coverage",
+    "test": "jest",
+    "fulltest": "jest --coverage",
     "lint": "eslint ."
   },
   "jest": {
