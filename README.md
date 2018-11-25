@@ -1,4 +1,4 @@
-# Finders-Keepers Frontend Documentaion
+# Piper's Seekers Frontend Documentation
 
 ### Contents
 * [Build Status](#Build-Status)
@@ -14,13 +14,18 @@
 
 ## Description
 
-Finder's Keepers is a competitive, multi-player brain-game. Users have a certain amount of time to find and click as many stars as they can before their competitors. The user who is able to find the most items in the alloted time limit is declared the winner.
+Piper's Seekers is a fork of the Finders Keepers frontend at  https://github.com/spyosaurus/finders-keepers-frontend
+This fork was created by Finders Keepers team member Jennifer Piper, to allow her to freely modify and upgrade her own version of the original Finders Keepers game.
+
 
 ## Build Status
 
-[![Build Status](https://travis-ci.org/spyosaurus/finders-keepers-frontend.svg?branch=master)](https://travis-ci.org/spyosaurus/finders-keepers-frontend)
+[![Build Status](https://travis-ci.org/jenwill/pipers-seekers-frontend.svg?branch=master)](https://travis-ci.org/jenwill/pipers-seekers-frontend)
 
 ## Architecture
+Piper's Seekers is front-end only intended to be run with the Finder's Keepers back-end:
+https://github.com/spyosaurus/finders-keepers-backend
+
 Finder's Keepers is a full-stack JavaScript application, utilizing the following:
 
 - Code Style: Airbnb
@@ -75,7 +80,7 @@ FINDERS_SECRET=yoursecretcodegoeshere
 7. IN THE FRONTEND run the ```npm run watch``` command to render application to the browser. 
 
 ## socket.IO
-This application uses Socekt.io in order to have multiplayer functionality in real time!
+This application uses Socket.io in order to have multiplayer functionality in real time!
 Players join a socket when they click "host" or "join" and after they have signed in or registered if they do not have an account.
 
 ## Tests
