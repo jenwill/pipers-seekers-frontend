@@ -66,13 +66,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spyosaurus/finders-keepers-frontend.git"
+    "url": "git+https://github.com/jenwill/pipers-seekers-frontend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spyosaurus/finders-keepers-frontend/issues"
+    "url": "https://github.com/jenwill/pipers-seekers-frontend/issues"
   },
-  "homepage": "https://github.com/spyosaurus/finders-keepers-frontend#readme"
+  "homepage": "https://github.com/jenwill/pipers-seekers-frontend#readme"
 }
