@@ -21,7 +21,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: 'Finders Keepers - A Search Game',
+    title: 'Piper\'s Seekers - A Search Game',
   }),
   // this makes webpack constants
   new DefinePlugin({

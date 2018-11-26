@@ -7,7 +7,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className='header'>
-        <h1>PIPERS SEEKERS</h1>
+        <h1>PIPER&#8217;S SEEKERS</h1>
         <h2>A Search Game</h2>
         <nav>
           <li>
