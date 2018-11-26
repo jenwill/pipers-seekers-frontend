@@ -10,11 +10,11 @@
 
 ## Version
 
-1.0.2
+1.0.0
 
 ## Description
 
-Piper's Seekers is a fork of the Finders Keepers frontend at  https://github.com/spyosaurus/finders-keepers-frontend
+Piper's Seekers frontend is a fork of the Finders Keepers frontend at  https://github.com/spyosaurus/finders-keepers-frontend
 This fork was created by Finders Keepers team member Jennifer Piper, to allow her to freely modify and upgrade her own version of the original Finders Keepers game.
 
 
@@ -23,10 +23,9 @@ This fork was created by Finders Keepers team member Jennifer Piper, to allow he
 [![Build Status](https://travis-ci.org/jenwill/pipers-seekers-frontend.svg?branch=master)](https://travis-ci.org/jenwill/pipers-seekers-frontend)
 
 ## Architecture
-Piper's Seekers is front-end only intended to be run with the Finder's Keepers back-end:
-https://github.com/spyosaurus/finders-keepers-backend
 
-Finder's Keepers is a full-stack JavaScript application, utilizing the following:
+
+Piper's Seekers is a full-stack application, utilizing the following:
 
 - Code Style: Airbnb
 - Test Suite: Jest
