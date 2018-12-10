@@ -24,6 +24,7 @@ class WaitingRoom extends Component {
     };
     autoBind.call(this, WaitingRoom);
   }
+  
 
   static contextTypes = {
     router: PropTypes.object,
@@ -86,7 +87,16 @@ class WaitingRoom extends Component {
     });
   }
 
+  componentDidUpdate() {
+    console.log('COMPONENT DID UPDATE');
+  }
+
+  componentWillUnmount() {
+    console.log('COMPONENT WILL UNMOUNT');
+  }
+
   render() {
+    console.log('WAITING-ROOM.JS this.props:', this.props);
     const hostVarsJSX = <div>
           <form id="roomcode-form" onSubmit={this.handleJoinRoom}>
           <h3> # of Stars </h3>

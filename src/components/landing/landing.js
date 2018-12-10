@@ -72,7 +72,7 @@ class Landing extends React.Component {
       });
       this.handleRedirectToWaitingRoom();
     } else if (!this.props.token) {
-      this.setState({ authFormDisplay: true,  joinRoom: false}); // eslint-disable-line
+      this.setState({ authFormDisplay: true, joinRoom: false }); // eslint-disable-line
     }
   }
 
@@ -80,11 +80,11 @@ class Landing extends React.Component {
     event.preventDefault();
     this.setState({ joinRoom: true, authFormDisplay: false });
   }
-  
+
   handleJoinRoom(event) {
     event.preventDefault();
     this.props.socket.emit('JOIN_ROOM', this.state.roomCode.toUpperCase(), this.state.username);
-    
+
     this.props.socket.on('JOIN_ROOM_ERROR', (message) => {
       console.log('JOIN ROOM ERROR', message);
     });
@@ -96,44 +96,45 @@ class Landing extends React.Component {
         username: this.state.username,
       });
       this.handleRedirectToWaitingRoom();
-    }); 
+    });
   }
 
   render() {
+    console.log('LANDING.JS this.props:', this.props);
     const joinRoomJSX = <div>
-          <form id="roomcode-form" onSubmit={this.handleJoinRoom}>
-          <h3>Choose a Username</h3>
-          <input
-            name="username"
-            placeholder='username'
-            id="username"
-            onChange={this.handleChange}/>
-            <h3>Enter Room Code</h3>
-          <input
-            name="roomCode"
-            placeholder='room code'
-            id="roomcode-input"
-            onChange={this.handleChange}/>
-          <br/>
-          <button type="submit">Join Room</button>
-        </form>
-      </div>;
+      <form id="roomcode-form" onSubmit={this.handleJoinRoom}>
+        <h3>Choose a Username</h3>
+        <input
+          name="username"
+          placeholder='username'
+          id="username"
+          onChange={this.handleChange} />
+        <h3>Enter Room Code</h3>
+        <input
+          name="roomCode"
+          placeholder='room code'
+          id="roomcode-input"
+          onChange={this.handleChange} />
+        <br />
+        <button type="submit">Join Room</button>
+      </form>
+    </div>;
 
     const authFormJSX = <div>
       <h3> Sign Up </h3>
-        <AuthForm onComplete={this.handleSignup}/>
+      <AuthForm onComplete={this.handleSignup} />
       <h3> Login </h3>
-        <AuthForm type='login' onComplete={this.handleLogin}/>
-      </div>;
+      <AuthForm type='login' onComplete={this.handleLogin} />
+    </div>;
 
     return (
       <div className='landing'>
         <button type='button' className='host' onClick={this.handleCreateRoom}>HOST GAME</button>
-        <button type='button' className='join' onClick= {this.handleJoinClick}>JOIN GAME</button>
+        <button type='button' className='join' onClick={this.handleJoinClick}>JOIN GAME</button>
 
-        {this.state.joinRoom ? joinRoomJSX : undefined }
+        {this.state.joinRoom ? joinRoomJSX : undefined}
 
-        {this.state.authFormDisplay ? authFormJSX : undefined }
+        {this.state.authFormDisplay ? authFormJSX : undefined}
 
       </div>
     );
@@ -150,11 +151,17 @@ Landing.propTypes = {
   room: PropTypes.object,
 };
 
-const mapStateToProps = state => ({
-  socket: state.socket,
-  room: state.room,
-  token: state.auth,
-});
+// connect invokes mapStateToProps with all the data inside the Store. 
+// So 'state' here means the whole state of the Store.
+
+const mapStateToProps = (state) => {
+  console.log( 'MAPSTATETOPROPS state', state);
+  return {
+    socket: state.socket,
+    room: state.room,
+    token: state.auth,
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
   setRoom: room => dispatch(roomActions.roomSet(room)),

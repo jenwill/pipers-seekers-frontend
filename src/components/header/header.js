@@ -4,6 +4,12 @@ import { connect } from 'react-redux';
 import * as authActions from '../../actions/auth';
 
 class Header extends React.Component {
+  // constructor is only necessary to allow console log. 
+  // delete constructor when console log is deleted.
+  constructor(props) {
+    super(props);
+    console.log('Header props: ', props);
+  }
   render() {
     return (
       <header className='header'>
@@ -11,10 +17,10 @@ class Header extends React.Component {
         <h2>A Search Game</h2>
         <nav>
           <li>
-            <Link to={'/'}>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to={'/about'}>About</Link>
+            <Link to='/about'>About</Link>
           </li>
 
         </nav>
